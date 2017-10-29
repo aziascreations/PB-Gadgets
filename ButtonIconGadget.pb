@@ -1,4 +1,4 @@
-﻿﻿; ╔══════════════════════════════════════════════════════════╦═══════╗
+﻿; ╔══════════════════════════════════════════════════════════╦═══════╗
 ; ║ ButtonIconGadget                                         ║ v N/A ║
 ; ╠══════════════════════════════════════════════════════════╩═══════╣
 ; ║                                                                  ║
@@ -67,11 +67,12 @@ Procedure FreeButtonIcon(Button)
 EndProcedure
 
 CompilerIf #PB_Compiler_IsMainFile
-	OpenWindow(0, 0, 0, 512, 384, "", #PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget)
+	OpenWindow(0, 0, 0, 220, 130, "", #PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget)
 	
 	UsePNGImageDecoder()
 	LoadImage(0, ".\icon_16.png")
 	bi = ButtonIconGadget(10, 10, 120, 25, "I can do icon too", 0)
+	bj = ButtonIconGadget(10, 50, 200, 70, "And large buttons too", 0)
 	
 	Repeat
 		Select WaitWindowEvent()
@@ -82,3 +83,10 @@ CompilerIf #PB_Compiler_IsMainFile
 		EndSelect
 	ForEver
 CompilerEndIf
+
+; IDE Options = PureBasic 5.60 (Windows - x86)
+; CursorPosition = 4
+; FirstLine = 33
+; Folding = -
+; EnableXP
+; CompileSourceDirectory
