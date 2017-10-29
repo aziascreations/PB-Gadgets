@@ -17,7 +17,7 @@ Procedure ButtonIconGadget(x, y, w, h, Text.s, Icon, Flags=0)
 	Static Padding = 10
 	
 	Protected Font = GetGadgetFont(#PB_Default)
-	Protected Image
+	Protected Image, G
 	Protected iw, ih    ; label image height width
 	Protected icx, icy	; icon x, y within label image
 	Protected tw, th	; text height width
@@ -67,6 +67,8 @@ Procedure FreeButtonIcon(Button)
 EndProcedure
 
 CompilerIf #PB_Compiler_IsMainFile
+	Global bi, bj
+	
 	OpenWindow(0, 0, 0, 220, 130, "", #PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget)
 	
 	UsePNGImageDecoder()
@@ -85,8 +87,8 @@ CompilerIf #PB_Compiler_IsMainFile
 CompilerEndIf
 
 ; IDE Options = PureBasic 5.60 (Windows - x86)
-; CursorPosition = 4
-; FirstLine = 33
+; CursorPosition = 13
+; FirstLine = 3
 ; Folding = -
 ; EnableXP
 ; CompileSourceDirectory
